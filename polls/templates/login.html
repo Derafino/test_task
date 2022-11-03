@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="{% static 'polls/css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'polls/css/docs.css'%}" rel="stylesheet">
+
+    <title>Login form</title>
+
+    <script src="{% static 'polls/js/bootstrap.bundle.min.js'%}"></script>
+  </head>
+  <body class="p-3 m-0 border-0 bd-example">
+
+
+    <div class="dropdown-menu" style="width: 35rem;margin-left: auto;
+    margin-right: auto;margin-top: 10rem" >
+      <form class="px-4 py-3" method="POST">
+          {% csrf_token %}
+        <div class="mb-3">
+          <label for="exampleDropdownFormLogin1" class="form-label">Username</label>
+          <input name = "username" type="login" class="form-control" id="exampleDropdownFormLogin1" placeholder="Username">
+        </div>
+        <div class="mb-3">
+          <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+          <input name = "password" type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+        </div>
+        <div class="mb-3">
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+    </div>
+  </body>
+</html>

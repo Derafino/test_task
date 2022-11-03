@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link href="{% static 'polls/css/bootstrap.css'%}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<div style="margin:20px" style="float: right">
+<a type="button" class="btn btn-primary" style="float: right" href="{% url 'logout' %}">Logout</a></div>
+
+
+
+
+
+
+
+<div class="card" style="width: 35rem; margin-left: auto;
+    margin-right: auto;
+">
+  {% if img %}
+<img src={{ img }} class="rounded-1" />
+{% endif %}
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Username: {{ user.username }}</li>
+    <li class="list-group-item">First Name: {{ user.first_name }}</li>
+    <li class="list-group-item">Last Name: {{ user.last_name }}</li>
+      <li class="list-group-item">Date joined: {{ user.date_joined }}</li>
+  </ul>
+</div>
+
+
+
+
+
+
+</body>
+</html>
