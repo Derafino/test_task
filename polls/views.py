@@ -68,7 +68,7 @@ def login_view(request):
     return render(request, 'login.html')
 
 
-@login_required
+@login_required(login_url='/login')
 def home(request):
     user = request.user
     try:
